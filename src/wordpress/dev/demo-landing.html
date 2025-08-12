@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Void → WordPress Demo Landing</title>
+    <style>
+      :root {
+        --bg: #0f1222;
+        --card: #141834;
+        --text: #e8ecff;
+        --muted: #b0b7d1;
+        --primary: #7c8cff;
+        --accent: #9d7cff;
+        --ring: rgba(124, 140, 255, 0.35);
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+      .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+      .hero { position: relative; border-radius: 16px; padding: 64px 28px; background: radial-gradient(1200px 600px at 20% -10%, rgba(124,140,255,0.24), transparent), radial-gradient(1000px 500px at 100% 0%, rgba(157,124,255,0.18), transparent), var(--card); overflow: hidden; }
+      .hero h1 { margin: 0 0 12px; font-size: clamp(28px, 6vw, 48px); line-height: 1.05; letter-spacing: -0.02em; }
+      .hero p { margin: 8px 0 24px; color: var(--muted); font-size: clamp(14px, 2.6vw, 18px); max-width: 720px; }
+      .cta { display: inline-block; background: linear-gradient(90deg, var(--primary), var(--accent)); color: #0b0e1a; font-weight: 700; text-decoration: none; padding: 12px 20px; border-radius: 10px; box-shadow: 0 8px 24px var(--ring); transition: transform 120ms ease; }
+      .cta:hover { transform: translateY(-1px); }
+      .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; margin-top: 28px; }
+      .card { grid-column: span 12; background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 20px; }
+      .card h3 { margin: 0 0 8px; font-size: 18px; }
+      .card p { margin: 0; color: var(--muted); font-size: 14px; }
+      @media (min-width: 720px) {
+        .card { grid-column: span 4; }
+      }
+      .section { margin-top: 42px; }
+      .section h2 { margin: 0 0 12px; font-size: 22px; letter-spacing: -0.01em; }
+      .feature { display: flex; gap: 16px; align-items: flex-start; padding: 16px; border-radius: 12px; background: rgba(124,140,255,0.06); border: 1px solid rgba(124,140,255,0.18); }
+      .feature strong { display: inline-block; min-width: 64px; color: var(--primary); }
+      .footer { margin: 56px 0 12px; color: var(--muted); font-size: 13px; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <h1>Deploy pages from Void to WordPress in seconds</h1>
+        <p>
+          This is a demo landing page showcasing a simple HTML layout you can push to WordPress using the minimal API client. Edit freely, then redeploy.
+        </p>
+        <a class="cta" href="#features">Try the Demo</a>
+      </section>
+
+      <section id="features" class="section">
+        <h2>What this demo includes</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Modern UI</h3>
+            <p>Clean layout, accessible typography, and responsive design with zero dependencies.</p>
+          </article>
+          <article class="card">
+            <h3>Fast Deploy</h3>
+            <p>Pair this HTML file with the `WordPressClient` to create a published page in one call.</p>
+          </article>
+          <article class="card">
+            <h3>Editable</h3>
+            <p>Change copy, styles, and sections locally, then redeploy to iterate quickly.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="feature">
+          <strong>Tip</strong>
+          <p>Use a strong title when deploying (e.g., “Void Demo Landing”) so it’s easy to find in your WordPress Pages list.</p>
+        </div>
+      </section>
+
+      <p class="footer">Void × WordPress • Demo content for integration testing</p>
+    </main>
+  </body>
+  </html>
+
+
